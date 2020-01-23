@@ -6,11 +6,12 @@ from zer0.data import Zer0Data
 
 class TangerineAdapter(object):
 
-    def __init__(self):
+    def __init__(self, cc=False):
         self.date_idx = 0
         self.description_idx = 2
         self.memo_idx = 3
         self.inflow_outflow_idx = 4
+        self.cc = cc
 
 
     def to_date(self, dt):
@@ -33,7 +34,7 @@ class TangerineAdapter(object):
         output = Zer0Data()
         output.Date = self.to_date(row[self.date_idx])
 
-        if row[self.memo_idx]:
+        if row[self.memo_idx] and not self.cc:
             output.Payee = self.strip_memo(row[self.memo_idx])
         else:
             output.Payee = self.strip_description(row[self.description_idx])

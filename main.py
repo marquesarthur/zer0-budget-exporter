@@ -8,8 +8,9 @@ parser = argparse.ArgumentParser()
 
 
 parser.add_argument("-b", "--bank", help="Bank so the proper bank adapter is loaded", choices=['cibc', 'tangerine'])
-parser.add_argument("-c", "--account", help="Bank account")
+parser.add_argument("-a", "--account", help="Bank account")
 parser.add_argument("-f", "--file", help="Input file")
+parser.add_argument("-c", "--ccard", help="Whether the input is a credit card", action='store_true')
 
 
 args = parser.parse_args()
@@ -18,6 +19,9 @@ args = parser.parse_args()
 
 b2_zer0 = BankCsvReader.get_reader(args.bank)
 zer0 = []
+
+if args.ccard:
+    b2_zer0.reader.cc = args.ccard
 
 with open(args.file) as csvfile:
     data = csv.reader(csvfile)
