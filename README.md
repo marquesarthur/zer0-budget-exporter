@@ -22,14 +22,16 @@ Exports csv data to zero format
    
 4. Update the spreadsheet key with your Zer0 key. Instructions available [here](https://support.qooqee.com/hc/en-us/articles/360000471814-How-do-I-find-my-Google-Sheet-Key-)
 
-5. Open `service_account_credentials.json`, go to your Zer0 spreadsheet and share the spreadsheet with the email under the key `client_email`
+5. Open `service_account_credentials.json` pick the email under the key `client_email` and share your Zer0 spreadsheet with it
 
 
 # Usage
 
 Run the script with python, as in the example:
 
-    `python main.py -f input.csv -c -a "Zer0 account identifier" -b bank_adapter`
+```shell
+    python main.py -f input.csv -c -a "Zer0 account identifier" -b bank_adapter
+```
 
 where:
 
