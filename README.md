@@ -76,7 +76,7 @@ class TempalteAdapter(object):
         return output
 ```
 
-The fields in this template are the bate minimum needed to import data to Zer0. Feel free to create more refined adapters that fit your needs.
+The fields in this template are the bare minimum needed to import data to Zer0. Feel free to create more refined adapters that fit your needs.
 
 Add your adapter to the list of valid banks on `bank_to_zer0.py`. At the moment, each bank should have a unique name
 
