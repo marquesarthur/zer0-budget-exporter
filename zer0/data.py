@@ -1,15 +1,9 @@
-# Link - 0
-# Account - 1
-# Flag	 - 2
-# Date	- 3
-# Payee	- 4
-# Category Group: Category - 5
-# Category Group - 6
-# Category	- 7
-# Memo	- 8
-# Outflow	- 9
-# Inflow	- 10
-# Cleared - 11
+ZER0_COLUMNS = [
+    "Link", "Account", "Flag", "Date",
+    "Payee", "Category Group: Category",
+    "Category Group", "Category",
+    "Memo", "Outflow", "Inflow", "Cleared"
+]
 
 
 class Zer0Data(object):
